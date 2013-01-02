@@ -1,6 +1,6 @@
 Overview
 =============
-This class is a Mac OS X replacement of NSTextFieldCell class that interprets Bold HTML tags (&lt;b&gt;) in the title and subTitle attributes of the TextFieldCell.
+This class is a Mac OS X replacement of <em>NSTextFieldCell</em> class that interprets Bold HTML tags (&lt;b&gt;) in title and subTitle attributes.
 
 <ul>
 <li>Parts of title without tags are rendered with <strong>textColor</strong> and <strong>font</strong>;</li>
@@ -9,7 +9,7 @@ This class is a Mac OS X replacement of NSTextFieldCell class that interprets Bo
 <li>Parts of subTitle between <b></b> tags are rendered with <strong>subTitleHighlightedTextColor</strong> and <strong>subTitleHighlightedTextFont</strong>;</li>
 </ul>
 
-This implementation is faster than NSWebView and is perfect for '''NSTableView''', it is very easy to customize it for your needs.
+This implementation is faster than <em>NSWebView</em> and is perfect for <em>NSTableView</em>, it is very easy to customize it for your needs.
 
 Example
 =============
