@@ -27,7 +27,7 @@ And here is an usage example:
         forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     ASTextFieldCell *aCell = (ASTextFieldCell *)cell;
-    aCell.title = @"<b>Highlighted</b> title";
-    aCell.subTitle = @"<b>Highlighted</b> subTitle";
+    aCell.title = @"&lt;b&gt;Highlighted&lt;/b&gt; title";
+    aCell.subTitle = @"&lt;b&gt;Highlighted&lt;/b&gt; subTitle";
 }
 </pre>
