@@ -3,7 +3,7 @@ Overview
 This class is a Mac OS X replacement of NSTextFieldCell class that interprets Bold HTML tags (&lt;b&gt;) in the title and subTitle attributes of the TextFieldCell.
 
 <ul>
-<li>Parts of title without tags are rendered with **textColor** and **font**;</li>
+<li>Parts of title without tags are rendered with <strong>textColor</strong> and <strong>font</strong>;</li>
 <li>Parts of title between <b></b> tags are rendered with **highligtedTextColor** and **highligtedTextFont**;</li>
 <li>Parts of subTitle without tags are rendered with **subTitleTextColor** and **subTitleTextFont**;</li>
 <li>Parts of subTitle between <b></b> tags are rendered with **subTitleHighlightedTextColor** and **subTitleHighlightedTextFont**;</li>
