@@ -85,9 +85,9 @@
         NSFont* currentFont = font;
         if (bold && highlightedFont != nil)
             currentFont = highlightedFont;
-        NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
+        NSDictionary *attributes = [[[NSDictionary alloc] initWithObjectsAndKeys:
                                     currentFont, NSFontAttributeName,
-                                    currentColor, NSForegroundColorAttributeName, nil];
+                                    currentColor, NSForegroundColorAttributeName, nil] autorelease];
         [toDisplay drawInRect:CGRectMake(rect.origin.x + offset, rect.origin.y, rect.size.width, rect.size.height) withAttributes:attributes];
         NSRect s = [toDisplay boundingRectWithSize:rect.size options:NSStringDrawingOneShot attributes:attributes];
         offset += s.size.width;
