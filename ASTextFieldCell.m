@@ -85,10 +85,13 @@
         NSFont* currentFont = font;
         if (bold && highlightedFont != nil)
             currentFont = highlightedFont;
+	NSMutableParagraphStyle* paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        [paragraphStyle setLineBreakMode:self.lineBreakMode];
         NSDictionary *attributes = [[[NSDictionary alloc] initWithObjectsAndKeys:
                                     currentFont, NSFontAttributeName,
-                                    currentColor, NSForegroundColorAttributeName, nil] autorelease];
-        [toDisplay drawInRect:CGRectMake(rect.origin.x + offset, rect.origin.y, rect.size.width, rect.size.height) withAttributes:attributes];
+                                    currentColor, NSForegroundColorAttributeName, 
+				    paragraphStyle, NSParagraphStyleAttributeName, nil] autorelease];
+        [toDisplay drawInRect:CGRectMake(rect.origin.x + offset, rect.origin.y, rect.size.width - offset, rect.size.height) withAttributes:attributes];
         NSRect s = [toDisplay boundingRectWithSize:rect.size options:NSStringDrawingOneShot attributes:attributes];
         offset += s.size.width;
     }
